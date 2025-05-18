@@ -1,0 +1,102 @@
+body {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.main-title {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.habit-card {
+  background: #2a2a2a;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  display: inline-block;
+  width: auto;
+  max-width: auto;
+}
+
+.habit-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #7b61ff; /* Default: Code Practice purple */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 28px);
+  grid-auto-flow: row:
+  column-gap: 0.4rem;
+  row-gap: 0.4rem;
+}
+
+.cell {
+  width: 25px;
+  height: 25px;
+  background-color: #444;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+}
+
+.cell.filled {
+  background-color: #7b61ff; /* Code Practice filled color */
+}
+
+.cell.inactive {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.tracker-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .tracker-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#reward-popup {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #2a2a2a;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+#reward-popup img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
